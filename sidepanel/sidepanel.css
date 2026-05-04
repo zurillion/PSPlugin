@@ -1,0 +1,124 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+
+header {
+  padding: 12px 16px;
+  background: #003791;
+  color: white;
+}
+header h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: #555;
+}
+.tab.active {
+  color: #003791;
+  border-bottom: 2px solid #003791;
+  font-weight: 600;
+}
+
+main { padding: 12px; }
+
+.panel.hidden { display: none; }
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 6px 12px;
+  border: 1px solid #003791;
+  background: white;
+  color: #003791;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+button.primary {
+  background: #003791;
+  color: white;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button.primary:not(:disabled):hover { background: #002d75; }
+button:not(.primary):not(:disabled):hover { background: #f0f4ff; }
+
+.count {
+  margin-left: auto;
+  font-size: 11px;
+  color: #777;
+}
+
+.status {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+  min-height: 16px;
+}
+.status.error { color: #c00; }
+
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.empty {
+  padding: 12px;
+  text-align: center;
+  color: #999;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+  font-size: 12px;
+}
+th {
+  background: #f5f5f5;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+td.img { width: 56px; }
+td.img img {
+  width: 48px;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}

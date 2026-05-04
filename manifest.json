@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "PSN Library Extractor",
+  "version": "0.1.0",
+  "description": "Estrae libreria acquistata e trofei dall'account PSN dell'utente loggato ed esporta in CSV.",
+  "permissions": [
+    "cookies",
+    "storage",
+    "downloads",
+    "webRequest",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "*://*.account.sony.com/*",
+    "*://*.playstation.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "action": {
+    "default_title": "PSN Library Extractor"
+  }
+}

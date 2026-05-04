@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PSN Library Extractor</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PSN Library Extractor</h1>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="purchased">Acquistati</button>
+      <button class="tab" data-tab="trophies">Trofei</button>
+    </nav>
+
+    <main>
+      <section class="panel" data-panel="purchased">
+        <div class="actions">
+          <button id="extract-purchased" class="primary">Estrai libreria</button>
+          <button id="export-purchased" disabled>Esporta CSV</button>
+          <span class="count" id="count-purchased"></span>
+        </div>
+        <div class="status" id="status-purchased"></div>
+        <div class="table-wrap" id="table-purchased"></div>
+      </section>
+
+      <section class="panel hidden" data-panel="trophies">
+        <div class="actions">
+          <button id="extract-trophies" class="primary">Estrai trofei</button>
+          <button id="export-trophies" disabled>Esporta CSV</button>
+          <span class="count" id="count-trophies"></span>
+        </div>
+        <div class="status" id="status-trophies"></div>
+        <div class="table-wrap" id="table-trophies"></div>
+      </section>
+    </main>
+
+    <script type="module" src="sidepanel.js"></script>
+  </body>
+</html>
